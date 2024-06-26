@@ -8,14 +8,22 @@ test('return inventory', (t) => {
   when(mockStore.check('banana')).thenReturn(10);
   when(mockStore.check('orange')).thenReturn(10);
 
-  const svc = new Store(instance(mockStore));
+  // const svc = new Store(instance(mockStore));
 
-  // TODO
+  // t.is(svc.inventory(), {
+  //   apple: 10,
+  //   banana: 10,
+  //   orange: 10,
+  // });
 });
 
 test('calls fetch for bananas', (t) => {
   const mockStore = mock(WarehouseStorage);
   const svc = new Store(instance(mockStore));
-
-  // TODO
+  // svc.buyBasket({'banana': 5})
+  // t.is(svc.inventory(), {
+  //   apple: 10,
+  //   banana: 5,
+  //   orange: 10,
+  // });
 });
